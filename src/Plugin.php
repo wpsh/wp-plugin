@@ -136,6 +136,24 @@ class Plugin {
 	}
 
 	/**
+	 * Return the plugin name from the plugin header.
+	 *
+	 * @return string
+	 */
+	public function name() {
+		return $this->meta( 'Plugin Name' );
+	}
+
+	/**
+	 * Return the plugin URI from the plugin header.
+	 *
+	 * @return string
+	 */
+	public function uri() {
+		return $this->meta( 'Plugin URI' );
+	}
+
+	/**
 	 * Get plugin meta data.
 	 *
 	 * @param  string $field Optional field key.
