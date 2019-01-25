@@ -15,11 +15,23 @@
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
     "automattic/vipwpcs": "^0.4.0",
-    "wp-coding-standards/wpcs": "^1.2"
+    "wp-coding-standards/wpcs": "^1.2",
+    "brainmaestro/composer-git-hooks": "^2.6"
   },
   "scripts": {
+    "post-install-cmd": [
+      "vendor/bin/cghooks add --no-lock"
+    ],
+    "post-update-cmd": [
+      "vendor/bin/cghooks update"
+    ],
     "lint": [
       "vendor/bin/phpcs ."
     ]
+  },
+  "extra": {
+    "hooks": {
+      "pre-commit": "composer lint"
+    }
   }
 }
