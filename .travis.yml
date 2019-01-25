@@ -9,6 +9,7 @@ install:
 
 script:
   - composer lint
+  - composet test
 
 cache:
   directories:

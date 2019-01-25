@@ -11,13 +11,20 @@
       "WPSH\\Plugin\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "WPSH\\Plugin\\Tests\\": "tests/unit/"
+    }
+  },
   "require": {},
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
     "automattic/vipwpcs": "^0.4.0",
     "wp-coding-standards/wpcs": "^1.2",
     "brainmaestro/composer-git-hooks": "^2.6",
-    "editorconfig-checker/editorconfig-checker": "^8.0"
+    "editorconfig-checker/editorconfig-checker": "^8.0",
+    "phpunit/phpunit": "^7.0",
+    "10up/wp_mock": "^0.4.0"
   },
   "scripts": {
     "post-install-cmd": [
@@ -35,6 +42,12 @@
     "lint": [
       "@lint-php",
       "@lint-editorconfig"
+    ],
+    "test-unit": [
+      "vendor/bin/phpunit --coverage-text"
+    ],
+    "test": [
+      "@test-unit"
     ]
   },
   "extra": {
