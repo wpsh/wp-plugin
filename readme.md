@@ -1,5 +1,8 @@
 # Helper Library for WordPress Plugins
 
+[![Build Status](https://travis-ci.com/wpsh/wp-plugin.svg?branch=master)](https://travis-ci.com/wpsh/wp-plugin)
+[![Coverage Status](https://coveralls.io/repos/github/wpsh/wp-plugin/badge.svg?branch=master)](https://coveralls.io/github/wpsh/wp-plugin?branch=master)
+
 Work in progress!
 
 
