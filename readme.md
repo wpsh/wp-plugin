@@ -19,10 +19,20 @@ composer require wpsh/wp-plugin
 
 use WPSH\Plugin;
 
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require( __DIR__ . '/vendor/autoload.php' );
+}
+
 $plugin = new Plugin\Plugin( __FILE__ );
 
-echo $plugin->version(); // Fetches the version string from the plugin header.
+// Now use it as a dependency for your own plugin.
+$awesomePlugin = new AwesomePlugin( $plugin );
+$awesomePlugin->init_hooks();
 ```
+
+### API
+
+TODO: Build documentation from the docblock comments.
 
 
 ## Credits
