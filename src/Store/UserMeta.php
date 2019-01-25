@@ -5,7 +5,7 @@ namespace WPSH\Plugin\Store;
 /**
  * Interface for working with user meta.
  */
-class UserMeta {
+class UserMeta extends ObjectMeta {
 
 	/**
 	 * Defines the meta type.
