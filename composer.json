@@ -16,7 +16,8 @@
     "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
     "automattic/vipwpcs": "^0.4.0",
     "wp-coding-standards/wpcs": "^1.2",
-    "brainmaestro/composer-git-hooks": "^2.6"
+    "brainmaestro/composer-git-hooks": "^2.6",
+    "editorconfig-checker/editorconfig-checker": "^8.0"
   },
   "scripts": {
     "post-install-cmd": [
@@ -25,8 +26,15 @@
     "post-update-cmd": [
       "vendor/bin/cghooks update"
     ],
-    "lint": [
+    "lint-php": [
       "vendor/bin/phpcs ."
+    ],
+    "lint-editorconfig": [
+      "vendor/bin/editorconfig-checker --ignore-defaults ."
+    ],
+    "lint": [
+      "@lint-php",
+      "@lint-editorconfig"
     ]
   },
   "extra": {
