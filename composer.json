@@ -38,7 +38,7 @@
       "vendor/bin/phpcs ."
     ],
     "lint-editorconfig": [
-      "vendor/bin/editorconfig-checker --ignore-defaults ."
+      "vendor/bin/editorconfig-checker --ignore-defaults ./src/*"
     ],
     "lint": [
       "@lint-php",
